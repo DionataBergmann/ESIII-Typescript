@@ -5,6 +5,8 @@ export default class Product {
 
   code: number;
 
+  category: string;
+
   description: string;
 
   buyPrice: number;
@@ -18,6 +20,7 @@ export default class Product {
   constructor({
     buyPrice,
     code,
+    category,
     description,
     lovers,
     sellPrice,
@@ -25,6 +28,7 @@ export default class Product {
   }: Omit<Product, 'id'>) {
     this.buyPrice = buyPrice;
     this.code = code;
+    this.category = category;
     this.sellPrice = sellPrice;
     this.buyPrice = buyPrice;
     this.tags = tags;

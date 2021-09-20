@@ -15,6 +15,7 @@ productRouter.post('/', (request, response) => {
     const {
       buyPrice,
       code,
+      category,
       description,
       lovers,
       sellPrice,
@@ -24,6 +25,7 @@ productRouter.post('/', (request, response) => {
     const produto = service.execute({
       buyPrice,
       code,
+      category,
       description,
       lovers,
       sellPrice,
@@ -35,5 +37,14 @@ productRouter.post('/', (request, response) => {
     return response.status(400).json({ Erro: err.message });
   }
 });
+
+// productRouter.delete('/:code', async (request, response) =>{
+//   const code = +request.params.code
+//   if (code == NaN){
+//     return response.status(400).json("Favor colocar um número no código")
+//   }
+//   const res = productRepository.delete(code)
+//   return response.status(204).json(res)
+// })
 
 export default productRouter;

@@ -11,6 +11,7 @@ export default class CreateProductService {
   public execute({
     buyPrice,
     code,
+    category,
     description,
     lovers,
     sellPrice,
@@ -23,6 +24,7 @@ export default class CreateProductService {
       const p = new Product({
         buyPrice,
         code,
+        category,
         description,
         lovers,
         sellPrice,

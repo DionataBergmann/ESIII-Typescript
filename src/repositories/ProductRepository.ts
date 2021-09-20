@@ -15,9 +15,18 @@ export default class ProductRepository {
     return this.products.find(v => v.code === code);
   }
 
+  // // Criar a rota apagar 
+  // public delete(code: number): Product | undefined{
+  //   const produto = this.products.find(v => v.code == code)
+  //   const index = this.products.findIndex(v => v.code == code)
+  //   this.products.splice(index, 1)
+  //   return produto
+  // }
+
   public save({
     buyPrice,
     code,
+    category,
     description,
     lovers,
     sellPrice,
@@ -26,6 +35,7 @@ export default class ProductRepository {
     const product = new Product({
       buyPrice,
       code,
+      category,
       description,
       lovers,
       sellPrice,
