@@ -38,13 +38,5 @@ productRouter.post('/', (request, response) => {
   }
 });
 
-// productRouter.delete('/:code', async (request, response) =>{
-//   const code = +request.params.code
-//   if (code == NaN){
-//     return response.status(400).json("Favor colocar um número no código")
-//   }
-//   const res = productRepository.delete(code)
-//   return response.status(204).json(res)
-// })
 
 export default productRouter;
